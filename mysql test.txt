@@ -1,0 +1,18 @@
+﻿
+
+3) You're given a database (education) with three tables (student, course, institution) as illustrated below:
+a) Use the diagram above to create the tables (the database, table and column names should remain
+as indicated)
+
+
+mysql> create database education;
+mysql> show databases;
+mysql> use education;
+mysql> 	create table student (studentid int(11) unsigned not null auto_increment, name varchar(250) not null, course int(11))
+	-> create table course (courseid int(11) unsigned not null auto_increment, name varchar(250), institution int(11))
+	-> create table institution (institutionid int(11) unsigned not null auto_increment, name varchar(250))
+
+b) Write a MySQL query that will display the number of students per course per institution in the
+format below
+
+select INSTITUTION NAME, COURSE NAME, NUMBER OF STUDENTS from student where (INSTITUTION NAME like '%Maximo%', COURSE NAME like '%Maximo%') and NUMBER OF STUDENTS > 1000;
